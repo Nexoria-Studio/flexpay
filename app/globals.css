@@ -5,17 +5,38 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #7ac52d;
+  --secondary: #407bff;
+  --text: #081013;
+  --font-outfit: "Outfit", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* primary to 20% for the nav */
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-outfit);
+}
+
+p {
+  font-family: var(--font-roboto);
 }
