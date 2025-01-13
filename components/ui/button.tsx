@@ -1,21 +1,19 @@
 import React from "react";
+import cn from '@/utils/cn'
 type ButtonProps = {
   children: React.ReactNode;
   className?: string;
-  variance?: "default" | "outline";
+  variant?: "default" | "outline";
 };
-export const Button = ({
-  children,
-  className,
-  variance = "default",
-}: ButtonProps) => {
+export const Button = ({ children, className, variant = "default" }: ButtonProps) => {
   return (
     <button
-      className={`px-4 py-2 bg-primary text-white rounded-full ${
-        variance == "default"
-          ? "bg-primary text-white"
-          : "bg-white border-primary border !text-primary"
-      }`}
+      className={cn(
+        "px-4 py-2 rounded-full font-medium transition-all", 
+        variant === "default" && "bg-primary text-white",
+        variant === "outline" && "bg-white border border-primary text-primary",
+        className // Additional classes
+      )}
     >
       {children}
     </button>

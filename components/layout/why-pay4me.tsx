@@ -7,7 +7,7 @@ export default function WhyPay4Me() {
   return (
     <section className="">
       <SectionTitle className="text-center text-primary mb-16">
-        Why choose pay4me?
+        Why choose FlexiPay?
       </SectionTitle>
 
       <div className="w-full flex flex-col gap-8">

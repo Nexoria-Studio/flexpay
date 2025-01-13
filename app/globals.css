@@ -7,7 +7,7 @@
   --foreground: #171717;
   --primary: #7ac52d;
   --secondary: #407bff;
-  --text: #081013;
+  --text: #646768;
   --font-outfit: "Outfit", sans-serif;
   --font-roboto: "Roboto", sans-serif;
 }
@@ -39,6 +39,8 @@ button {
 
 p {
   font-family: var(--font-roboto);
+  color: var(--text);
+  font-size: 1.125rem;
 }
 
 section {
