@@ -40,3 +40,14 @@ button {
 p {
   font-family: var(--font-roboto);
 }
+
+section {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.bg-gradient {
+  background-color: #7ac52d80;
+  filter: blur(610.5px);
+}
