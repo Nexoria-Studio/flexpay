@@ -1,4 +1,4 @@
-import { Connect, Secure, Speed } from "@/components/svgs";
+import { Connect, Secure, Speed } from "@/components/svg";
 
 export const whyPay4me = [
   {

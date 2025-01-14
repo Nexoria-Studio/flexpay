@@ -12,7 +12,11 @@ export default {
         background: "#081013",
         foreground: "var(--foreground)",
         primary: "#7AC52D",
+        "primary-light": "var(--primary-light)",
         text: "#646768",
+      },
+      fontFamily: {
+        montserrat: "var(--font-montserrat)",
       },
     },
   },

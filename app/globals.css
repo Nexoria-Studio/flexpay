@@ -6,6 +6,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: #7ac52d;
+  --primary-light: #dfefd0;
   --secondary: #407bff;
   --text: #646768;
   --font-outfit: "Outfit", sans-serif;
@@ -52,4 +53,7 @@ section {
 .bg-gradient {
   background-color: #7ac52d80;
   filter: blur(610.5px);
+}
+.downloads-shadow {
+  box-shadow: 0px 4px 14px 0px #00000040;
 }
