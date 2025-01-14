@@ -1,8 +1,8 @@
 interface ServiceCard {
-    id: number;
-    title: string;
-    description: string;
-    imageUrl: string;
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
 }
 
 const services: ServiceCard[] = [
@@ -11,7 +11,7 @@ const services: ServiceCard[] = [
     title: "Tuition Payments",
     description:
       "Quick, secure global tuition payments made easy with FlexiPay",
-    imageUrl: "/images/tuition.svg",
+    imageUrl: "/images/tuition.png",
   },
   {
     id: 2,
