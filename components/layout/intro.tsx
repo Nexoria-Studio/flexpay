@@ -18,7 +18,7 @@ export default function Intro() {
         and reliable transactions tailored to meet the unique needs of
         international students.
       </p>
-      <div className="flex justify-center gap-4 pt-4 mt-4">
+      <div className="flex justify-center gap-4 pt-4 mt-2 mb-4">
         <Button>
           <SectionTitle>Get Started</SectionTitle>
         </Button>

@@ -1,6 +1,4 @@
-import Intro from "@/components/layout/intro";
-import Services from "@/components/layout/services";
-import WhyPay4Me from "@/components/layout/why-pay4me";
+import { Intro, Join, Services, WhyPay4Me } from "@/components/layout";
 
 export default function Home() {
   return (
@@ -8,6 +6,7 @@ export default function Home() {
       <Intro />
       <WhyPay4Me />
       <Services />
+      <Join />
     </main>
   );
 }
