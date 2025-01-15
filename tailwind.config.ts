@@ -17,6 +17,7 @@ export default {
       },
       fontFamily: {
         montserrat: "var(--font-montserrat)",
+        inter: "var(--font-inter)",
       },
     },
   },
