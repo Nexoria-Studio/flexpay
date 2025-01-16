@@ -18,9 +18,7 @@ const ServiceCard = ({ title, desc, img }: CardProps) => {
         alt={title}
         width={430}
         height={100}
-        className="w-full h-full object-cover brightness-75"
-        quality={75}
-        priority
+        className="w-96 object-cover brightness-75"
       />
       <div
         id="overlay"
