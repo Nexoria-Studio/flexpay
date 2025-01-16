@@ -10,8 +10,8 @@ export default function Home() {
       <Partners />
       <WhyPay4Me />
       <Services />
-      <Join />
       <Testimony />
+      <Join />
     </main>
   );
 }
