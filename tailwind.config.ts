@@ -24,6 +24,7 @@ export default {
         montserrat: "var(--font-montserrat)",
         outfit: "var(--font-outfit)",
         roboto: "var(--font-roboto)",
+        inter: "var(--font-inter)",
       },
     },
   },
