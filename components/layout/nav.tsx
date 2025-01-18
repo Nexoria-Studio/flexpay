@@ -14,9 +14,9 @@ type LinkProps = {
 const links: LinkProps[] = [
   { name: "Home", link: "/" },
   { name: "About Us", link: "/about" },
-  { name: "Services", link: "/services" },
-  { name: "Blog", link: "/blog" },
-  { name: "FAQ", link: "/faq" },
+  { name: "Services", link: "/#services" },
+  { name: "Blog", link: "/#blog" },
+  { name: "FAQ", link: "/#faqs" },
   { name: "Contact", link: "/contact" },
 ];
 
@@ -51,7 +51,7 @@ export default function Nav() {
         {/* Logo Section */}
         <div
           id="logo"
-          className="font-bold text-2xl text-primary font-montserrat"
+          className="font-bold text-xl text-primary font-montserrat"
         >
           FlexiPay
         </div>

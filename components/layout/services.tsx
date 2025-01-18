@@ -22,10 +22,10 @@ const ServiceCard = ({ title, desc, img }: CardProps) => {
       />
       <div
         id="overlay"
-        className="absolute bottom-4 left-4 right-4 border border-white p-4 backdrop-blur-lg rounded-xl"
+        className="absolute bottom-4 left-4 right-4 border border-white/50 p-4 backdrop-blur-lg rounded-xl"
       >
         <h4 className="text-lg font-semibold text-white mb-2">{title}</h4>
-        <p className="text-white font-inter">{desc}</p>
+        <p className="text-white font-roboto text-base">{desc}</p>
         <Button variant="default" className="mt-2 w-full">
           <SectionTitle>make payment</SectionTitle>
         </Button>
@@ -36,7 +36,7 @@ const ServiceCard = ({ title, desc, img }: CardProps) => {
 
 export default function Services() {
   return (
-    <section className="mb-6">
+    <section className="mb-6" id="services">
       <SectionTitle className="text-primary text-center my-16">
         Our services
       </SectionTitle>

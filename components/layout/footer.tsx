@@ -40,7 +40,7 @@ export default function Footer() {
       <footer className="grid grid-cols-6 gap-8 py-12">
         <div
           id="logo"
-          className="font-bold text-2xl text-primary font-montserrat"
+          className="font-bold text-xl text-primary font-montserrat"
         >
           FlexiPay
         </div>
