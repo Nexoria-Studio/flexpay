@@ -1,9 +1,14 @@
-
-import { Intro, Join, Services, WhyPay4Me } from "@/components/layout";
-import Posts from "@/components/layout/blog-post";
-import Footer from "@/components/layout/footer";
-import Partners from "@/components/layout/partners";
-import Testimony from "@/components/layout/testimony";
+import {
+  Intro,
+  Join,
+  Services,
+  WhyPay4Me,
+  Posts,
+  Partners,
+  Testimony,
+  FAQs,
+  Footer,
+} from "@/components/layout";
 
 export default function Home() {
   return (
@@ -14,6 +19,7 @@ export default function Home() {
       <Services />
       <Testimony />
       <Posts />
+      <FAQs />
       <Join />
       <Footer />
     </main>

@@ -4,6 +4,7 @@ import Image from "next/image";
 // Remember to use proper data
 import posts from "@/data/posts.data";
 import Link from "next/link";
+import { MoveRight } from "lucide-react";
 
 type CardProps = {
   title: string;
@@ -17,21 +18,21 @@ const PostCard = ({ title, desc, img }: CardProps) => {
       <Image
         src={img}
         alt={title}
-        width={100}
+        width={430}
         height={100}
-        className="w-96 object-cover h-full brightness-75"
+        className="w-96 object-cover h-full brightness-80"
       />
       <div
         id="overlay"
-        className="absolute bottom-4 left-4 right-4 border border-white/50 p-4 backdrop-blur-lg rounded-xl flex flex-col gap-4"
+        className="absolute bottom-4 left-4 right-4 border border-white/50 p-4 backdrop-blur-lg rounded-xl "
       >
         <h4 className="text-lg font-outfit font-semibold text-white mb-2">
           {title}
         </h4>
-        <p className="text-white font-outfit text-base">{desc}</p>
+        <p className="text-white font-roboto text-base">{desc}</p>
         <Link
           href={"/"}
-          className="text-white underline decoration-primary decoration-2 font-semibold underline-offset-4 capitalize"
+          className="text-white underline decoration-primary decoration-2 font-semibold font-outfit underline-offset-4 capitalize mt-2"
         >
           Read Article
         </Link>
@@ -55,6 +56,14 @@ export default function Posts() {
             img={post.imageUrl}
           />
         ))}
+      </div>
+      <div className="py-4 text-right">
+        <Link
+          href={"/"}
+          className="font-outfit underline decoration-primary decoration-2 underline-offset-4 capitalize text-text"
+        >
+          See More Posts <MoveRight />
+        </Link>
       </div>
     </section>
   );

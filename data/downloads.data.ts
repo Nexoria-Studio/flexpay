@@ -3,10 +3,10 @@
 export const downloads = {
   count: "100k +",
   images: [
-    "/images/bills.png",
-    "/images/tuition.png",
-    "/images/visa.png",
-    "/images/bills.png",
-    "/images/tuition.png",
+    "/images/bills.jpg",
+    "/images/tuition.jpg",
+    "/images/visa.jpg",
+    "/images/bills.jpg",
+    "/images/tuition.jpg",
   ],
 };

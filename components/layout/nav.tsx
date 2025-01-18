@@ -51,7 +51,7 @@ export default function Nav() {
         {/* Logo Section */}
         <div
           id="logo"
-          className="font-bold text-2xl text-primary font-montserrat"
+          className="font-bold text-xl text-primary font-montserrat"
         >
           FlexiPay
         </div>
