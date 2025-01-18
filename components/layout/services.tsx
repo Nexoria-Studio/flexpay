@@ -12,7 +12,7 @@ type CardProps = {
 
 const ServiceCard = ({ title, desc, img }: CardProps) => {
   return (
-    <div className="relative aspect-[41/53] w-full h-auto rounded-[30px] overflow-hidden">
+    <div className="relative aspect-[41/53] w-full h-auto rounded-[20px] overflow-hidden">
       <Image
         src={img}
         alt={title}
