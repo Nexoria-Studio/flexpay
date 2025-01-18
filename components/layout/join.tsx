@@ -24,26 +24,28 @@ function DownloadButton({
 
 export default function Join() {
   return (
-    <section className="relative bg-custom-gradient flex w-full rounded-[20px] text-white py-24 px-12 overflow-hidden my-6">
-      <div id="text" className="lg:w-2/3 ">
-        <div className="space-y-4 mb-8">
-          <SectionTitle className="text-xl">
-            Ready to Simplify Your Payments?
-          </SectionTitle>
-          <Heading className="text-5xl font-semibold capitalize leading-normal">
-            Join thousands of satisfied customers worldwide
-          </Heading>
+    <section>
+      <div className="relative bg-custom-gradient flex w-full rounded-[20px] text-white py-24 px-12 overflow-hidden my-6">
+        <div id="text" className="lg:w-2/3 ">
+          <div className="space-y-4 mb-8">
+            <SectionTitle className="text-xl">
+              Ready to Simplify Your Payments?
+            </SectionTitle>
+            <Heading className="text-5xl font-semibold capitalize leading-normal">
+              Join thousands of satisfied customers worldwide
+            </Heading>
+          </div>
+          <div id="app-buttons" className="flex gap-4">
+            <DownloadButton icon={<Play width={33} />} name="GOOGLE PLAY" />
+            <DownloadButton
+              icon={<Apple width={30} color="white" />}
+              name="APP STORE"
+            />
+          </div>
         </div>
-        <div id="app-buttons" className="flex gap-4">
-          <DownloadButton icon={<Play width={33} />} name="GOOGLE PLAY" />
-          <DownloadButton
-            icon={<Apple width={30} color="white" />}
-            name="APP STORE"
-          />
+        <div id="img" className="lg:w-1/3 absolute right-12 top-1/3">
+          <IphoneMockup />
         </div>
-      </div>
-      <div id="img" className="lg:w-1/3 absolute right-12 top-1/3">
-        <IphoneMockup />
       </div>
     </section>
   );

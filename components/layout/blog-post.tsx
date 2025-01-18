@@ -13,19 +13,21 @@ type CardProps = {
 
 const PostCard = ({ title, desc, img }: CardProps) => {
   return (
-    <div className="relative">
+    <div className="relative aspect-[41/53] w-full h-auto rounded-[20px] overflow-hidden">
       <Image
         src={img}
         alt={title}
         width={100}
         height={100}
-        className="w-96 object-cover brightness-75"
+        className="w-96 object-cover h-full brightness-75"
       />
       <div
         id="overlay"
         className="absolute bottom-4 left-4 right-4 border border-white/50 p-4 backdrop-blur-lg rounded-xl flex flex-col gap-4"
       >
-        <h4 className="text-lg font-outfit font-semibold text-white mb-2">{title}</h4>
+        <h4 className="text-lg font-outfit font-semibold text-white mb-2">
+          {title}
+        </h4>
         <p className="text-white font-outfit text-base">{desc}</p>
         <Link
           href={"/"}
