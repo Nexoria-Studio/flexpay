@@ -36,7 +36,7 @@ const ServiceCard = ({ title, desc, img }: CardProps) => {
 
 export default function Services() {
   return (
-    <section className="mb-6">
+    <section className="mb-6" id="services">
       <SectionTitle className="text-primary text-center my-16">
         Our services
       </SectionTitle>

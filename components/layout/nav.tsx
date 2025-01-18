@@ -14,9 +14,9 @@ type LinkProps = {
 const links: LinkProps[] = [
   { name: "Home", link: "/" },
   { name: "About Us", link: "/about" },
-  { name: "Services", link: "/services" },
-  { name: "Blog", link: "/blog" },
-  { name: "FAQ", link: "/faq" },
+  { name: "Services", link: "/#services" },
+  { name: "Blog", link: "/#blog" },
+  { name: "FAQ", link: "/#faqs" },
   { name: "Contact", link: "/contact" },
 ];
 

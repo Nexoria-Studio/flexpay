@@ -43,7 +43,7 @@ const PostCard = ({ title, desc, img }: CardProps) => {
 
 export default function Posts() {
   return (
-    <section className="mb-6">
+    <section className="mb-6" id="blog">
       <SectionTitle className="text-primary text-center my-16">
         Blog posts
       </SectionTitle>
@@ -57,12 +57,12 @@ export default function Posts() {
           />
         ))}
       </div>
-      <div className="py-4 text-right">
-        <Link
-          href={"/"}
-          className="font-outfit underline decoration-primary decoration-2 underline-offset-4 capitalize text-text"
-        >
-          See More Posts <MoveRight />
+
+      <div className="py-4 flex justify-end">
+        <Link href={"/"} className="font-outfit capitalize text-text">
+          <span className="flex gap-1 underline decoration-primary decoration-2 underline-offset-4 ">
+            See More Posts <MoveRight />
+          </span>
         </Link>
       </div>
     </section>

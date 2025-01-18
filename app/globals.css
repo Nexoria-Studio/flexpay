@@ -27,6 +27,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -66,4 +67,13 @@ section {
     rgba(255, 255, 255, 1) 50%,
     rgba(255, 255, 255, 0) 100%
   );
+}
+
+.rotate-0 {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
