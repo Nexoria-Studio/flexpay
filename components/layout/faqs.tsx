@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { SectionTitle } from "../ui/text";
 import Link from "next/link";
 import { ChevronDown, ChevronUp, MoveRight } from "lucide-react";
-import { Chevron } from "../svg";
 
 type faq = { id: number; question: string; answer: string };
 
@@ -36,14 +35,14 @@ export default function FAQs() {
             className="bg-primary-light text-text rounded-2xl p-4 h-auto max-w-[800px] w-full"
             key={id}
           >
-            <div className="flex items-center justify-between gap-4">
+            <div
+              className="flex items-center justify-between gap-4 cursor-pointer "
+              onClick={() =>
+                current === id ? setCurrent(null) : setCurrent(id)
+              }
+            >
               <h3 className="text-[18px] font-outfit">{question}</h3>
-              <span
-                className="cursor-pointer transition"
-                onClick={() =>
-                  current === id ? setCurrent(null) : setCurrent(id)
-                }
-              >
+              <span className="cursor-pointer transition">
                 <ChevronDown
                   className={`h-6 w-6 ${
                     current === id ? "rotate-0" : "rotate-180"
