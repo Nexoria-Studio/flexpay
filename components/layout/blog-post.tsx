@@ -20,7 +20,7 @@ const PostCard = ({ title, desc, img }: CardProps) => {
         alt={title}
         width={430}
         height={100}
-        className="w-96 object-cover h-full brightness-80"
+        className="w-96 object-cover h-full brightness-75"
       />
       <div
         id="overlay"
@@ -32,7 +32,7 @@ const PostCard = ({ title, desc, img }: CardProps) => {
         <p className="text-white font-roboto text-base">{desc}</p>
         <Link
           href={"/"}
-          className="text-white underline decoration-primary decoration-2 font-semibold font-outfit underline-offset-4 capitalize mt-2"
+          className="text-white underline decoration-primary decoration-2 hover:decoration-4 transition ease-out font-semibold font-outfit underline-offset-4 capitalize mt-2"
         >
           Read Article
         </Link>
@@ -60,7 +60,7 @@ export default function Posts() {
 
       <div className="py-4 flex justify-end">
         <Link href={"/"} className="font-outfit capitalize text-text">
-          <span className="flex gap-1 underline decoration-primary decoration-2 underline-offset-4 ">
+          <span className="flex gap-1 underline decoration-primary decoration-2 hover:decoration-4 transition ease-out  underline-offset-4 ">
             See More Posts <MoveRight />
           </span>
         </Link>

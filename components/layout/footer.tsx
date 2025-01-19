@@ -1,6 +1,9 @@
 import React from "react";
 import { Heading } from "../ui/text";
 import Link from "next/link";
+import { Facebook, Instagram, Linkedin, Tiktok, Youtube } from "../svg";
+import { Send } from "lucide-react";
+import { Button } from "../ui/button";
 const footerLinks = {
   quickLink: [
     { name: "Home", link: "/" },
@@ -11,12 +14,36 @@ const footerLinks = {
     { name: "Contact", link: "/contact" },
   ],
   socials: [
-    { name: "Facebook", link: "https://facebook.com/" },
-    { name: "X (formerly Twitter)", link: "https://x.com/" },
-    { name: "LinkedIn", link: "https://linkedin.com/" },
-    { name: "Tiktok", link: "https://tiktok.com/" },
-    { name: "Youtube", link: "https://youtube.com/" },
-    { name: "Instagram", link: "https://instagram.com/" },
+    {
+      name: "Facebook",
+      link: "https://facebook.com/",
+      icon: <Facebook width={22} />,
+    },
+    {
+      name: "X (formerly Twitter)",
+      link: "https://x.com/",
+      icon: <Facebook width={22} />,
+    },
+    {
+      name: "LinkedIn",
+      link: "https://linkedin.com/",
+      icon: <Linkedin width={22} />,
+    },
+    {
+      name: "Tiktok",
+      link: "https://tiktok.com/",
+      icon: <Tiktok width={22} />,
+    },
+    {
+      name: "Youtube",
+      link: "https://youtube.com/",
+      icon: <Youtube width={22} />,
+    },
+    {
+      name: "Instagram",
+      link: "https://instagram.com/",
+      icon: <Instagram width={22} />,
+    },
   ],
   legal: [
     { name: "Terms of service", link: "/terms" },
@@ -26,9 +53,18 @@ const footerLinks = {
   ],
 };
 
-const FooterLink = ({ name, link }: { name: string; link: string }) => (
+const FooterLink = ({
+  name,
+  link,
+  icon,
+}: {
+  name: string;
+  link: string;
+  icon?: React.ReactElement;
+}) => (
   <li className="py-1" key={link}>
-    <Link className="text-text" href={link}>
+    <Link className="text-text flex gap-2 items-center" href={link}>
+      {icon}
       {name}
     </Link>
   </li>
@@ -48,7 +84,7 @@ export default function Footer() {
           <Heading className="xl capitalize font-semibold text-text">
             quick links
           </Heading>
-          <ul>
+          <ul className="pt-4">
             {footerLinks.quickLink.map(({ name, link }) => (
               <FooterLink link={link} name={name} key={link} />
             ))}
@@ -58,9 +94,9 @@ export default function Footer() {
           <Heading className="xl capitalize font-semibold text-text">
             socials
           </Heading>
-          <ul>
-            {footerLinks.socials.map(({ name, link }) => (
-              <FooterLink link={link} name={name} key={link} />
+          <ul className="pt-4">
+            {footerLinks.socials.map(({ name, link, icon }) => (
+              <FooterLink link={link} name={name} icon={icon} key={link} />
             ))}
           </ul>
         </div>
@@ -68,7 +104,7 @@ export default function Footer() {
           <Heading className="xl capitalize font-semibold text-text">
             legal
           </Heading>
-          <ul>
+          <ul className="pt-4">
             {footerLinks.legal.map(({ name, link }) => (
               <FooterLink link={link} name={name} key={link} />
             ))}
@@ -78,7 +114,7 @@ export default function Footer() {
           <Heading className="xl capitalize font-semibold text-text">
             contact
           </Heading>
-          <div>
+          <div className="pt-4">
             <p className="text-base">
               Lorem ipsum dolor sit amet, consectetur
               <br /> <Link href="tel:+234 123456789">+234 123456789</Link>
@@ -89,12 +125,23 @@ export default function Footer() {
           <Heading className="xl capitalize font-semibold text-text">
             join our newsletter
           </Heading>
-          <ul></ul>
+          <div className="w-full flex pt-4">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              className="p-2.5 border rounded-ss-[20px] rounded-es-[20px]"
+            />
+            <Button className="rounded-es-[20px] rounded-ss-[20px] grid place-content-center">
+              <Send />
+            </Button>
+          </div>
         </div>
       </footer>
       <hr className=" border-2 border-primary" />
       <div className="space-y-4 pt-4">
-        <div className="flex justify-between gap-4 items-center">
+        <div className="flex justify-between gap-4 items-center max-sm:flex-col max-sm:items-start">
           <p className="text-sm">
             © 2020 - 2024 FlexiPay, Inc., All rights reserved
           </p>

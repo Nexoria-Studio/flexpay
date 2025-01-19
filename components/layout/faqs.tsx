@@ -32,40 +32,44 @@ export default function FAQs() {
       <div className="flex flex-col gap-8 items-center">
         {faqs.map(({ id, answer, question }) => (
           <div
-            className="bg-primary-light text-text rounded-2xl p-4 h-auto max-w-[800px] w-full"
+            className="bg-primary-light text-text rounded-2xl p-4   max-w-[800px] w-full"
             key={id}
           >
             <div
-              className="flex items-center justify-between gap-4 cursor-pointer "
-              onClick={() =>
-                current === id ? setCurrent(null) : setCurrent(id)
-              }
+              className="flex items-center justify-between gap-4 cursor-pointer"
+              onClick={() => setCurrent(current === id ? null : id)}
             >
               <h3 className="text-[18px] font-outfit">{question}</h3>
               <span className="cursor-pointer transition">
                 <ChevronDown
                   className={`h-6 w-6 ${
-                    current === id ? "rotate-0" : "rotate-180"
+                    current === id ? "rotate-180" : "rotate-0"
                   }`}
                 />
               </span>
             </div>
-            <p
-              className={`text-base pt-4 ${
-                current == id ? "h-fit block" : "hidden"
+            <div
+              className={`transition-all ease-out duration-300 ${
+                current == id ? "pt-4" : "pt-0"
               }`}
+              style={{
+                maxHeight: current === id ? "200px" : "0px",
+                opacity: current === id ? 1 : 0,
+              }}
             >
-              The purpose of this website is to provide a platform for people to
-              share their thoughts and ideas on various topics. It is a place
-              where you can express yourself and connect with others who share
-              your interests.
-            </p>
+              <p className="text-base">
+                The purpose of this website is to provide a platform for people
+                to share their thoughts and ideas on various topics. It is a
+                place where you can express yourself and connect with others who
+                share your interests.
+              </p>
+            </div>
           </div>
         ))}
       </div>
       <div className="py-4 flex justify-end">
         <Link href={"/"} className="font-outfit capitalize text-text">
-          <span className="flex gap-1 underline decoration-primary decoration-2 underline-offset-4 ">
+          <span className="flex gap-1 underline decoration-primary decoration-2 hover:decoration-4 transition ease-out  underline-offset-4">
             See All FAQs <MoveRight />
           </span>
         </Link>
