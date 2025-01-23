@@ -15,11 +15,9 @@ import TechStars from "./techstars";
 import Tiktok from "./tiktok";
 import Youtube from "./youtube";
 import TechStarsGray from "./techstars-gray";
-import Chevron from "./chevron";
 
 export {
   Connect,
-  Chevron,
   GlobeConnection,
   IphoneMockup,
   Secure,

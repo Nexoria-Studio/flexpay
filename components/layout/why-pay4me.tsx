@@ -4,7 +4,7 @@ import cn from "@/utils/cn";
 
 export default function WhyPay4Me() {
   return (
-    <section className="">
+    <section className="mb-6" id="about">
       <SectionTitle className="text-center text-primary mb-16">
         Why choose FlexiPay?
       </SectionTitle>
