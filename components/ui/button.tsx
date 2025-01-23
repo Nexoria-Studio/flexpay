@@ -1,20 +1,26 @@
 import React from "react";
-import cn from '@/utils/cn'
-type ButtonProps = {
+import cn from "@/utils/cn";
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
   className?: string;
   variant?: "default" | "outline";
 };
-export const Button = ({ children, className, variant = "default" }: ButtonProps) => {
+
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  className,
+  variant = "default",
+  ...props
+}) => {
+  const baseStyles = "px-4 py-2 rounded-full font-medium transition-all";
+  const variantStyles =
+    variant === "default"
+      ? "bg-primary text-white"
+      : "bg-white border border-primary text-primary";
+
   return (
-    <button
-      className={cn(
-        "px-4 py-2 rounded-full font-medium transition-all", 
-        variant === "default" && "bg-primary text-white",
-        variant === "outline" && "bg-white border border-primary text-primary",
-        className // Additional classes
-      )}
-    >
+    <button className={cn(baseStyles, variantStyles, className)} {...props}>
       {children}
     </button>
   );

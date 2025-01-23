@@ -1,9 +1,11 @@
-import React from "react";
-import { Heading } from "../ui/text";
+"use client";
+import React, { useState } from "react";
+import { Heading, SectionTitle } from "../ui/text";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Tiktok, Youtube } from "../svg";
-import { Send } from "lucide-react";
 import { Button } from "../ui/button";
+import { X } from "lucide-react";
+import cn from "@/utils/cn";
 const footerLinks = {
   quickLink: [
     { name: "Home", link: "/" },
@@ -71,6 +73,10 @@ const FooterLink = ({
 );
 
 export default function Footer() {
+  const [showPopup, setShowPopup] = useState(false);
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
   return (
     <section>
       <footer className="grid grid-cols-6 gap-8 py-12">
@@ -123,19 +129,46 @@ export default function Footer() {
         </div>
         <div>
           <Heading className="xl capitalize font-semibold text-text">
-            join our newsletter
+            Join our newsletter
           </Heading>
           <div className="w-full flex pt-4">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              className="p-2.5 border rounded-ss-[20px] rounded-es-[20px]"
-            />
-            <Button className="rounded-es-[20px] rounded-ss-[20px] grid place-content-center">
-              <Send />
+            <Button
+              onClick={() => {
+                setShowPopup(true);
+              }}
+            >
+              Subscribe
             </Button>
+            {showPopup && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                <div
+                  className={cn(
+                    "bg-white rounded-lg shadow-lg p-6 transition-transform duration-300 max-w-[500px] w-full",
+                    showPopup ? "animate-popup-open" : "animate-popup-close"
+                  )}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <h2 className="text-xl font-bold mb-4">Subscribe</h2>
+                    <Button onClick={handleClosePopup} variant="outline">
+                      <X size={20} />
+                    </Button>
+                  </div>
+                  <p className="mb-4">
+                    Subscribe to our newsletter for updates.
+                  </p>
+                  <div className="flex">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email"
+                      className="p-2.5 pl-4 border rounded-ss-[20px] rounded-es-[20px] w-full"
+                    />
+                    <Button className="rounded-s-[20px]">Subscribe</Button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </footer>
