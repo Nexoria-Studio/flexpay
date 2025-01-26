@@ -22,7 +22,9 @@ export default function WhyPay4Me() {
           >
             <Illustration className="w-full lg:w-1/2 h-auto relative z-[5]" />
             <div className="w-full lg:w-1/2 flex flex-col gap-4 lg:gap-8 relative z-[5]">
-              <Heading className="text-6xl font-bold">{title}</Heading>
+              <Heading className="lg:text-6xl md:text-5xl text-3xl font-bold">
+                {title}
+              </Heading>
               <p>{desc}</p>
             </div>
 

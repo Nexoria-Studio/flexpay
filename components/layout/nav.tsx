@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../ui/button";
 import cn from "@/utils/cn";
+import { MenuIcon } from "lucide-react";
 
 type LinkProps = {
   name: string;
@@ -44,6 +45,7 @@ const NavLink = ({
 
 export default function Nav() {
   const pathname = usePathname();
+  const [menu, setMenu] = useState<boolean | null>(null)
 
   return (
     <header className="p-8">
@@ -59,7 +61,7 @@ export default function Nav() {
         {/* Links Section */}
         <div
           id="menu"
-          className="px-1.5 py-2 w-fit h-fit bg-primary/20 rounded-full text-text font-normal"
+          className="lg:block hidden px-1.5 py-2 w-fit h-fit bg-primary/20 rounded-full text-text font-normal"
         >
           <ul className="flex gap-4 items-center">
             {links.map((link, index) => (
@@ -73,8 +75,12 @@ export default function Nav() {
           </ul>
         </div>
 
+        <div id="burger" className="lg:hidden">
+          <MenuIcon size={35} className="cursor-pointer"/>
+        </div>
+
         {/* Button Section */}
-        <div id="button">
+        <div id="button" className="lg:block hidden ">
           <Button>Download App</Button>
         </div>
       </nav>

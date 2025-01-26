@@ -12,7 +12,7 @@ type CardProps = {
 
 const ServiceCard = ({ title, desc, img }: CardProps) => {
   return (
-    <div className="relative aspect-[41/53] w-full h-auto rounded-[20px] overflow-hidden">
+    <div className="relative aspect-[41/53] w-full min-w-72 h-auto rounded-[20px] overflow-hidden">
       <Image
         src={img}
         alt={title}
@@ -25,7 +25,9 @@ const ServiceCard = ({ title, desc, img }: CardProps) => {
         className="absolute bottom-4 left-4 right-4 border border-white/50 p-4 backdrop-blur-lg rounded-xl"
       >
         <h4 className="text-lg font-semibold text-white mb-2">{title}</h4>
-        <p className="text-white font-roboto text-base">{desc}</p>
+        <p className="text-white font-roboto md:text-base text-sm">
+          {desc}
+        </p>
         <Button variant="default" className="mt-2 w-full">
           <SectionTitle>make payment</SectionTitle>
         </Button>
@@ -36,11 +38,11 @@ const ServiceCard = ({ title, desc, img }: CardProps) => {
 
 export default function Services() {
   return (
-    <section className="mb-6" id="services">
+    <section className="mb-6 overflow-hidden" id="services">
       <SectionTitle className="text-primary text-center my-16">
         Our services
       </SectionTitle>
-      <div className="flex gap-8">
+      <div className="flex gap-8 md:overflow-scroll">
         {services.map((service) => (
           <ServiceCard
             key={service.id}
