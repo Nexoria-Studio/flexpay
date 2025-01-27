@@ -10,9 +10,12 @@ export default function Testimony() {
         What Our Customers Say
       </SectionTitle>
 
-      <div className="grid grid-cols-3 gap-8">
+      <div className="flex gap-8">
         {testimonies.map(({ img, name, testimony }, i) => (
-          <div key={i} className="flex items-center justify-center flex-col">
+          <div
+            key={i}
+            className="flex items-center justify-stretch flex-col min-w-72 w-full h-auto"
+          >
             <div className="size-40 -mb-20 relative z-[1]">
               <Image
                 src={img}

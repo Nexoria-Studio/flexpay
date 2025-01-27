@@ -9,16 +9,16 @@ import cn from "@/utils/cn";
 export default function Intro() {
   return (
     <section className="max-w-7xl mx-auto py-8">
-      <Heading className="text-7xl text-center w-[70%] mx-auto font-bold !leading-snug">
+      <Heading className="lg:text-7xl md:text-5xl text-4xl text-center md:w-[70%] w-full mx-auto font-bold !leading-snug">
         Effortless Cross-Border Payments for Students
       </Heading>
-      <p className="text-center text-text/90 w-[60%] mx-auto py-6 px-4">
+      <p className="text-center text-text/90 md:w-[60%] w-full mx-auto py-6 md:px-4">
         FlexiPay simplifies paying tuition, fees, and more to institutions,
         businesses, and government agencies worldwide. Experience secure, fast,
         and reliable transactions tailored to meet the unique needs of
         international students.
       </p>
-      <div className="flex justify-center gap-4 pt-4 mt-2 mb-4">
+      <div className="flex flex-col md:flex-row justify-center gap-4 pt-4 mt-2 mb-4">
         <Button>
           <SectionTitle>Get Started</SectionTitle>
         </Button>

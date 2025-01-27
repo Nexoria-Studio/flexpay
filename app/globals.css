@@ -49,7 +49,7 @@ p {
 section {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 2rem;
+  @apply md:p-8 p-4; 
 }
 
 .bg-gradient {

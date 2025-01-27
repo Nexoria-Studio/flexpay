@@ -79,7 +79,7 @@ export default function Footer() {
   };
   return (
     <section>
-      <footer className="grid grid-cols-6 gap-8 py-12">
+      <footer className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-1 gap-8 py-12">
         <div
           id="logo"
           className="font-bold text-xl text-primary font-montserrat"
@@ -136,6 +136,7 @@ export default function Footer() {
               onClick={() => {
                 setShowPopup(true);
               }}
+              className="w-full"
             >
               Subscribe
             </Button>
