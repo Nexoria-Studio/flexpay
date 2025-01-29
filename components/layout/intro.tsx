@@ -19,10 +19,10 @@ export default function Intro() {
         international students.
       </p>
       <div className="flex flex-col md:flex-row justify-center gap-4 pt-4 mt-2 mb-4">
-        <Button>
+        <Button className="w-[180px]">
           <SectionTitle>Get Started</SectionTitle>
         </Button>
-        <Button variant="outline">
+        <Button variant="outline" className="w-[180px]">
           <SectionTitle>Download App</SectionTitle>
         </Button>
       </div>

@@ -12,22 +12,20 @@ type CardProps = {
 
 const ServiceCard = ({ title, desc, img }: CardProps) => {
   return (
-    <div className="relative aspect-[41/53] w-full min-w-72 h-auto rounded-[20px] overflow-hidden">
+    <div className="relative aspect-[41/53] w-full min-w-[300px] h-auto rounded-[20px] overflow-hidden">
       <Image
         src={img}
         alt={title}
         width={430}
         height={100}
-        className="w-96 object-cover h-full brightness-75"
+        className="w-96 object-cover h-full brightness-[.6]"
       />
       <div
         id="overlay"
-        className="absolute bottom-4 left-4 right-4 border border-white/50 p-4 backdrop-blur-lg rounded-xl"
+        className="absolute bottom-4 left-4 right-4 border border-white/20 p-4 backdrop-blur-2xl rounded-[20px]"
       >
         <h4 className="text-lg font-semibold text-white mb-2">{title}</h4>
-        <p className="text-white font-roboto md:text-base text-sm">
-          {desc}
-        </p>
+        <p className="text-white font-roboto md:text-base text-sm">{desc}</p>
         <Button variant="default" className="mt-2 w-full">
           <SectionTitle>make payment</SectionTitle>
         </Button>

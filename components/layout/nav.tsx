@@ -49,7 +49,7 @@ export default function Nav() {
 
   return (
     <header className="p-8">
-      <nav className="max-w-7xl mx-auto flex justify-between items-center">
+      <nav className="max-w-7xl mx-auto h-[40px] flex justify-between items-center">
         {/* Logo Section */}
         <div
           id="logo"

@@ -10,7 +10,7 @@ export default function Testimony() {
         What Our Customers Say
       </SectionTitle>
 
-      <div className="flex gap-8">
+      <div className="flex gap-8 md:overflow-scroll">
         {testimonies.map(({ img, name, testimony }, i) => (
           <div
             key={i}
