@@ -32,7 +32,7 @@ export default function FAQs() {
       <div className="flex flex-col gap-8 items-center">
         {faqs.map(({ id, answer, question }) => (
           <div
-            className="bg-primary-light text-text rounded-2xl p-4 max-w-[800px] w-full"
+            className="bg-primary-light text-text rounded-[20px] p-4 max-w-[800px] w-full"
             key={id}
             onClick={() => setCurrent(current === id ? null : id)}
           >
